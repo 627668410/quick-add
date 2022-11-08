@@ -2,11 +2,11 @@
 
 > 模板文件
 
-![](/images/template.png)
+![](images/template.png)
 
 > setting.json
 
-![](/images/setting.png)
+![](images/setting.png)
 
 - label: 命令的名称（必填）
 - description：命令的描述（可选）
@@ -16,11 +16,11 @@
 
 > newDir 新建文件夹
 
-![](/images/list.gif)
+![](images/list.gif)
 
 > 添加文件
 
-![](/images/modal.gif)
+![](images/modal.gif)
 
 ## 文件目录替换
 
