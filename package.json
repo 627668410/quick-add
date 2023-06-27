@@ -3,7 +3,7 @@
   "displayName": "quick-add",
   "description": "按模板添加代码",
   "publisher": "lujing",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.73.0"
   },
