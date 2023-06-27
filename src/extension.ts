@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       // 执行命令的文件夹路径
-      const basePath = uri.path;
+      const basePath = path.normalize(uri.path);
       if (!basePath) {
         messageError('获取当前目录路径失败');
         return;
@@ -61,7 +61,11 @@ export function activate(context: vscode.ExtensionContext) {
             })
             .then(function (fileName) {
               const writePath = path.join(basePath, fileName);
-              fs.mkdirSync(writePath);
+              try {
+                fs.mkdirSync(writePath);
+              } catch (e) {
+                messageError(`新建${writePath}文件夹失败`);
+              }
               fileOper(fileName as string, writePath);
             });
         }
