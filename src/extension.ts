@@ -17,9 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       // 执行命令的文件夹路径
       const basePath =
-        process.platform === 'darwin'
-          ? uri.path
-          : uri.path.replace(path.win32.sep, '');
+        process.platform === 'darwin' ? uri.path : uri.path.replace('/', '');
       if (!basePath) {
         messageError('获取当前目录路径失败');
         return;
