@@ -40,6 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
             fileName,
             writePath,
             isRoot: true,
+            rootPath: writePath,
           });
           if (quickOpen) {
             const uri = vscode.Uri.file(path.join(writePath, quickOpen));

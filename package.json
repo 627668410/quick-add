@@ -34,11 +34,15 @@
       ]
     },
     "configuration": {
-      "type": "array",
       "title": "quick-add",
       "properties": {
         "quick-add": {
+          "type": "array",
           "description": "可配属性label，description，path，quickOpen，newDir的数组"
+        },
+        "quick-add-name-constant": {
+          "type": "array",
+          "description": "可配属性constant(替换的变量名)，rule(替换的规则)，relativePath(模块相对于当前执行目录的相对位置), absolutePath(绝对路径)的数组,定义文件中匹配的变量规则，匹配规则按照QuickAddFileName等6种"
         }
       }
     }

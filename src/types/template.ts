@@ -3,10 +3,8 @@ export interface TemplateWrite {
   fileName: string;
   writePath: string;
   isRoot: boolean;
+  /** 执行命令的目录的路径 */
+  rootPath: string;
 }
 
-export interface FileCreateParams {
-  templatePath: string;
-  fileName: string;
-  writePath: string
-}
+export type FileCreateParams = Omit<TemplateWrite, 'isRoot'>;
